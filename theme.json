@@ -1,0 +1,101 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"color": "#2E0F08",
+					"name": "Base",
+					"slug": "base"
+				},
+				{
+					"color": "#FFFFFF",
+					"name": "Contrast",
+					"slug": "contrast"
+				},
+				{
+					"color": "#630B00",
+					"name": "Primary",
+					"slug": "primary"
+				},
+				{
+					"color": "#E7B031",
+					"name": "Secondary",
+					"slug": "secondary"
+				},
+				{
+					"color": "#F5DDA2",
+					"name": "Off white",
+					"slug": "off-white"
+				},
+				{
+					"color": "#638338",
+					"name": "Green",
+					"slug": "greem"
+				},
+				{
+					"color": "#CC3017",
+					"name": "Red",
+					"slug": "red"
+				}
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"name": "Atkinson Hyperlegible",
+					"slug": "atkinsonhyperlegible",
+					"fontFamily": "AtkinsonHyperlegible, sans-serif",
+					"fontFace": [
+						{
+							"fontFamily": "AtkinsonHyperlegible",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/atkinson-hyperlegible/AtkinsonHyperlegible-Regular.ttf"
+							]
+						},
+						{
+							"fontFamily": "AtkinsonHyperlegible",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"src": [
+								"file:./assets/fonts/atkinson-hyperlegible/AtkinsonHyperlegible-Bold.ttf"
+							]
+						},
+						{
+							"fontFamily": "AtkinsonHyperlegible",
+							"fontStyle": "italic",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/atkinson-hyperlegible/AtkinsonHyperlegible-Italic.ttf"
+							]
+						},
+						{
+							"fontFamily": "AtkinsonHyperlegible",
+							"fontStyle": "italic",
+							"fontWeight": "700",
+							"src": [
+								"file:./assets/fonts/atkinson-hyperlegible/AtkinsonHyperlegible-BoldItalic.ttf"
+							]
+						}
+					]
+				},
+				{
+					"name": "LT Glockenspiel",
+					"slug": "ltglockenspiel",
+					"fontFamily": "LTGlockenspiel, sans-serif",
+					"fontFace": [
+						{
+							"fontFamily": "LTGlockenspiel",
+							"src": [
+								"file:./assets/fonts/lt-glockenspiel/LT Glockenspiel Black.ttf"
+							]
+						}
+					]
+				}
+			]
+		}
+	}
+}
