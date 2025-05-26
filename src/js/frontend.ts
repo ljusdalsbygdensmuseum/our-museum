@@ -1,1 +1,1 @@
-import '../sass/frontend.sass'
+import '../sass/frontend.scss'
