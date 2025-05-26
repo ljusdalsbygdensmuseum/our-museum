@@ -1,0 +1,31 @@
+{
+	"name": "our-museum",
+	"version": "1.0.0",
+	"main": "scripts.js",
+	"scripts": {
+		"build": "wp-scripts build",
+		"start": "wp-scripts start",
+		"dev": "wp-scripts start",
+		"devFast": "wp-scripts start",
+		"make-pot": "wp i18n make-pot . languages/omus-domain.pot",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"overrides": {
+		"cookie": "^1.0.1",
+		"cross-spawn": "^7.0.6",
+		"puppeteer-core": "^23.9.0",
+		"@babel/runtime": "7.26.10"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^30.7.0",
+		"ts-loader": "^9.5.1",
+		"typescript": "^5.7.2"
+	},
+	"dependencies": {
+		"@wordpress/i18n": "^5.9.0"
+	}
+}
