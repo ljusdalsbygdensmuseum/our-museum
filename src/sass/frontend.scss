@@ -110,6 +110,9 @@ div.wpforms-container {
 		border-radius: 0;
 		border-bottom: 2px solid var(--wp--preset--color--secondary);
 	}
+	button[type] {
+		border-radius: 0;
+	}
 }
 .temp-beg-container {
 	padding-top: 1rem;
