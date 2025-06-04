@@ -39,7 +39,7 @@ body {
 	}
 }
 .btn,
-button {
+button:not(.foh-display__button) {
 	position: relative;
 	color: var(--wp--preset--color--contrast) !important;
 	//hack: border color
