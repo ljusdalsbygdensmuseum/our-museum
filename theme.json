@@ -103,6 +103,14 @@
 		},
 		"spacing": {
 			"blockGap": true
+		},
+		"custom": {
+			"gapo": {
+				"xl": "8rem",
+				"l": "4rem",
+				"m": "2rem",
+				"s": "1rem"
+			}
 		}
 	},
 	"styles": {
@@ -117,13 +125,25 @@
 		"spacing": {
 			"margin": {
 				"left": "2rem",
-				"right": "2rem"
+				"right": "2rem",
+				"bottom": "4rem"
 			}
 		},
-		"elements": {
-			"heading": {
-				"typography": {
-					"fontFamily": "var:preset|font-family|ltglockenspiel"
+		"blocks": {
+			"core/columns": {
+				"spacing": {
+					"margin": {
+						"bottom": "var:custom|gapo|xl"
+					},
+					"blockGap": "var:custom|gapo|m"
+				}
+			},
+			"core/column": {
+				"spacing": {
+					"padding": {
+						"top": "var:custom|gapo|m",
+						"bottom": "var:custom|gapo|l"
+					}
 				}
 			}
 		}

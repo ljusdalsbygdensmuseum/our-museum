@@ -74,7 +74,9 @@ button:not(.foh-display__button) {
 $border: 3px solid var(--wp--preset--color--secondary);
 
 div.wpforms-container {
-	padding-bottom: 2rem !important;
+	padding-top: var(--wp--custom--gapo--m) !important;
+	padding-bottom: var(--wp--custom--gapo--l) !important;
+	margin-bottom: var(--wp--custom--gapo--xl) !important;
 	&:before {
 		content: '';
 		z-index: -1;
@@ -167,12 +169,13 @@ div.wpforms-container {
 		mask-composite: intersect;
 		width: 100vw;
 		height: 100%;
-		top: -4rem;
+		top: -6rem;
 		left: 50%;
 		transform: translate(-50%);
 	}
 	position: relative;
 }
-.wp-block-mptab-map {
+.wp-block-mptab-map .leaflet-container {
 	border: $border;
+	margin-bottom: -4rem;
 }
