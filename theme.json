@@ -95,6 +95,29 @@
 						}
 					]
 				}
+			],
+			"fluid": true,
+			"fontSizes": [
+				{
+					"name": "Small",
+					"slug": "s",
+					"size": "1em"
+				},
+				{
+					"name": "Medium",
+					"slug": "m",
+					"size": "2em"
+				},
+				{
+					"name": "Large",
+					"slug": "l",
+					"size": "3em"
+				},
+				{
+					"name": "Extra Large",
+					"slug": "xl",
+					"size": "4em"
+				}
 			]
 		},
 		"layout": {
@@ -109,7 +132,8 @@
 				"xl": "8rem",
 				"l": "4rem",
 				"m": "2rem",
-				"s": "1rem"
+				"s": "1rem",
+				"xs": "0.5rem"
 			}
 		}
 	},
@@ -129,6 +153,34 @@
 				"bottom": "4rem"
 			}
 		},
+		"elements": {
+			"heading": {
+				"typography": {
+					"fontSize": "var:preset|font-size|small",
+					"fontWeight": "700"
+				},
+				"spacing": {
+					"margin": {
+						"bottom": "var:custom|gapo|m"
+					}
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontSize": "var:preset|font-size|x-large"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontSize": "var:preset|font-size|large"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontSize": "var:preset|font-size|medium"
+				}
+			}
+		},
 		"blocks": {
 			"core/columns": {
 				"spacing": {
@@ -143,6 +195,42 @@
 					"padding": {
 						"top": "var:custom|gapo|m",
 						"bottom": "var:custom|gapo|l"
+					}
+				}
+			},
+			"mptab/show-ex-ev": {
+				"elements": {
+					"h3": {
+						"spacing": {
+							"margin": {
+								"bottom": "var:custom|gapo|s"
+							}
+						}
+					}
+				}
+			},
+			"mptab/show-services": {
+				"elements": {
+					"h3": {
+						"spacing": {
+							"margin": {
+								"bottom": "var:custom|gapo|s"
+							}
+						}
+					}
+				}
+			},
+			"flexible-open-hours/openhours": {
+				"elements": {
+					"heading": {
+						"typography": {
+							"fontSize": "var:preset|font-size|medium"
+						},
+						"spacing": {
+							"margin": {
+								"bottom": "var:custom|gapo|xs"
+							}
+						}
 					}
 				}
 			}
