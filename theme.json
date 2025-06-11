@@ -94,6 +94,37 @@
 							]
 						}
 					]
+				},
+				{
+					"name": "LT Museum",
+					"slug": "ltmuseum",
+					"fontFamily": "LTMuseum, serif",
+					"fontFace": [
+						{
+							"fontFamily": "LTMuseum",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": ["file:./assets/fonts/lt-museum/LTMuseum-Medium.ttf"]
+						},
+						{
+							"fontFamily": "LTMuseum",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"src": ["file:./assets/fonts/lt-museum/LTMuseum-Bold.ttf"]
+						},
+						{
+							"fontFamily": "LTMuseum",
+							"fontStyle": "italic",
+							"fontWeight": "400",
+							"src": ["file:./assets/fonts/lt-museum/LTMuseum-MediumItalic.ttf"]
+						},
+						{
+							"fontFamily": "LTMuseum",
+							"fontStyle": "italic",
+							"fontWeight": "700",
+							"src": ["file:./assets/fonts/lt-museum/LTMuseum-BoldItalic.ttf"]
+						}
+					]
 				}
 			],
 			"fluid": true,
@@ -168,6 +199,7 @@
 		"elements": {
 			"heading": {
 				"typography": {
+					"fontFamily": "var:preset|font-family|ltmuseum",
 					"fontSize": "var:preset|font-size|s",
 					"fontWeight": "700"
 				},
