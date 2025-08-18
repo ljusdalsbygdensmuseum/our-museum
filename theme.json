@@ -233,17 +233,14 @@
 		"blocks": {
 			"core/columns": {
 				"spacing": {
-					"margin": {
-						"bottom": "var:custom|gapo|xl"
-					},
 					"blockGap": "var:custom|gapo|m"
 				}
 			},
-			"core/column": {
+			"core/group": {
 				"spacing": {
 					"padding": {
 						"top": "var:custom|gapo|m",
-						"bottom": "var:custom|gapo|l"
+						"bottom": "var:custom|gapo|xl"
 					}
 				}
 			},
