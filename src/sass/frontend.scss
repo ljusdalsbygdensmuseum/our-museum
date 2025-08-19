@@ -57,13 +57,18 @@ button:not(.foh-display__button) {
 		mask-composite: exclude;
 		background-color: var(--wp--preset--color--green);
 	}
-	border-radius: 0;
-	border: none;
-	padding: 0.4rem 2rem;
+	& {
+		border-radius: 0;
+		border: none;
+		padding: 0.4rem 2rem;
+	}
 
-	mask: var(--corner-mask);
-	mask-composite: exclude;
-	transition: all 0.15s ease-out;
+	& {
+		mask: var(--corner-mask);
+		mask-composite: exclude;
+		transition: all 0.15s ease-out;
+	}
+
 	&:hover {
 		border: none;
 		background-color: var(--wp--preset--color--contrast);
@@ -214,6 +219,7 @@ div.wpforms-container {
 }
 .temp-map-container {
 	padding-bottom: var(--wp--custom--gapo--l);
+	position: relative;
 	&:before {
 		content: '';
 		z-index: -1;
@@ -233,13 +239,12 @@ div.wpforms-container {
 		width: 100vw;
 		height: 100%;
 		top: 0;
+		left: 50%;
+		transform: translate(-50%);
 		@media screen and (min-width: 782px) {
 			top: -6rem;
 		}
-		left: 50%;
-		transform: translate(-50%);
 	}
-	position: relative;
 }
 .wp-block-mptab-map .leaflet-container {
 	border: $border;
