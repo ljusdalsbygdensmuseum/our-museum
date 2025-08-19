@@ -70,6 +70,11 @@ button:not(.foh-display__button) {
 		filter: brightness(1.3);
 	}
 }
+.foh-display__button {
+	text-align: left;
+	opacity: 1;
+	color: var(--wp--preset--color--secondary);
+}
 
 $border: 3px solid var(--wp--preset--color--secondary);
 
