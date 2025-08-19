@@ -208,7 +208,7 @@ div.wpforms-container {
 	}
 }
 .temp-map-container {
-	padding-bottom: 2rem;
+	padding-bottom: var(--wp--custom--gapo--l);
 	&:before {
 		content: '';
 		z-index: -1;
@@ -227,7 +227,10 @@ div.wpforms-container {
 		mask-composite: intersect;
 		width: 100vw;
 		height: 100%;
-		top: -6rem;
+		top: 0;
+		@media screen and (min-width: 782px) {
+			top: -6rem;
+		}
 		left: 50%;
 		transform: translate(-50%);
 	}
@@ -235,7 +238,6 @@ div.wpforms-container {
 }
 .wp-block-mptab-map .leaflet-container {
 	border: $border;
-	margin-bottom: -4rem;
 }
 .small-gap {
 	margin-bottom: var(--wp--custom--gapo--xs);
