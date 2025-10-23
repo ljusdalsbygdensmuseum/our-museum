@@ -1,15 +1,18 @@
 body {
-	--corner-svg-tl: url('data:image/svg+xml,<svg width="100%" height="100%" viewBox="0 0 2134 2134" version="1.1" xmlns="http://www.w3.org/2000/svg" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><path d="M0,1651.36l0,-1651.36l2132.21,-0l-0,412.419l-533.172,-0c-73.098,283.383 -220.885,544.807 -431.349,755.272c-309.691,309.691 -729.722,483.673 -1167.69,483.673Z" style="fill:%23ebebeb;"/></svg>');
-	--corner-svg-tr: url('data:image/svg+xml,<svg width="100%" height="100%" viewBox="0 0 2134 2134" version="1.1" xmlns="http://www.w3.org/2000/svg" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><path d="M2132.21,1651.36l-0,-1651.36l-2132.21,-0l0,412.419l533.172,-0c73.097,283.383 220.885,544.807 431.349,755.272c309.691,309.691 729.722,483.673 1167.69,483.673Z" style="fill:%23ebebeb;"/></svg>');
-	--corner-svg-bl: url('data:image/svg+xml,<svg width="100%" height="100%" viewBox="0 0 2134 2134" version="1.1" xmlns="http://www.w3.org/2000/svg" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><path d="M0,481.969l-0,1651.36l2132.21,0l-0,-412.419l-533.172,0c-73.098,-283.382 -220.885,-544.807 -431.349,-755.271c-309.691,-309.691 -729.722,-483.674 -1167.69,-483.674Z" style="fill:%23ebebeb;"/></svg>');
-	--corner-svg-br: url('data:image/svg+xml,<svg width="100%" height="100%" viewBox="0 0 2134 2134" version="1.1" xmlns="http://www.w3.org/2000/svg" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><path d="M2132.21,481.969l-0,1651.36l-2132.21,0l0,-412.419l533.172,0c73.097,-283.382 220.885,-544.807 431.349,-755.271c309.691,-309.691 729.722,-483.674 1167.69,-483.674Z" style="fill:%23ebebeb;"/></svg>');
-	--corner-size: 0.8rem 0.8rem;
-	--corner-mask: var(--square-svg) -2% -2% / auto 102% repeat-x,
-		var(--corner-svg-tl) -2% -2% / var(--corner-size) no-repeat,
-		var(--corner-svg-tr) 102% -2% / var(--corner-size) no-repeat,
-		var(--corner-svg-bl) -2% 102% / var(--corner-size) no-repeat,
-		var(--corner-svg-br) 102% 102% / var(--corner-size) no-repeat;
-	--square-svg: url('data:image/svg+xml,<svg width="100%" height="100%" viewBox="0 0 2134 2134" version="1.1" xmlns="http://www.w3.org/2000/svg" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><rect x="0" y="0" width="2133.33" height="2133.33" style="fill:%23ebebeb;"/></svg>');
+	--corner-svg-neg: url('data:image/svg+xml, <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" ><path d="M511.731,0l0.269,0l0,512l-0.269,0l-0,-198.164c-52.556,0 -102.96,20.878 -140.123,58.041c-25.256,25.256 -42.99,56.627 -51.762,90.633l-127.961,-0c-8.772,-34.006 -26.506,-65.377 -51.762,-90.633c-37.163,-37.163 -87.567,-58.041 -140.123,-58.041l0,-115.672c52.556,-0 102.96,-20.878 140.123,-58.041c25.256,-25.256 42.99,-56.627 51.762,-90.633l127.961,0c8.772,34.006 26.506,65.377 51.762,90.633c37.163,37.163 87.567,58.041 140.123,58.041l-0,-198.164Z"/></svg>');
+	--corner-size: 1.5rem;
+	--corner-mask: var(--corner-svg-neg) 0 0 / var(--corner-size)
+			var(--corner-size) no-repeat,
+		var(--corner-svg-neg) 100% 0 / var(--corner-size) var(--corner-size)
+			no-repeat,
+		var(--corner-svg-neg) 100% 100% / var(--corner-size) var(--corner-size)
+			no-repeat,
+		var(--corner-svg-neg) 0 100% / var(--corner-size) var(--corner-size)
+			no-repeat,
+		linear-gradient(#000) 0 calc(var(--corner-size) / 2) / 100%
+			calc(100% - var(--corner-size)) no-repeat,
+		linear-gradient(#000) calc(var(--corner-size) / 2) 0 /
+			calc(100% - var(--corner-size)) 100% no-repeat;
 	&:before {
 		//overlay lights
 		content: '';
@@ -38,40 +41,36 @@ body {
 		pointer-events: none;
 	}
 }
+
 .btn,
 button:not(.foh-display__button) {
 	position: relative;
-	color: var(--wp--preset--color--contrast) !important;
+	border-radius: 0;
+	border: none;
+	padding: 0.4rem 2rem;
+	color: var(--wp--preset--color--contrast);
+	transition: all 0.15s ease-out;
 	//hack: border color
-	background-color: var(--wp--preset--color--contrast) !important;
+	mask: var(--corner-mask);
+	background-color: var(--wp--preset--color--green);
 	//hack: background color
 	&:after {
 		content: '';
-		z-index: -1;
 		position: absolute;
 		top: 2px;
 		left: 2px;
 		height: calc(100% - 4px);
 		width: calc(100% - 4px);
-		mask: var(--corner-mask);
-		mask-composite: exclude;
-		background-color: var(--wp--preset--color--green);
-	}
-	& {
-		border-radius: 0;
-		border: none;
-		padding: 0.4rem 2rem;
-	}
-
-	& {
-		mask: var(--corner-mask);
-		mask-composite: exclude;
-		transition: all 0.15s ease-out;
+		mask:
+			var(--corner-mask),
+			linear-gradient(#fff) 0 0 / cover no-repeat;
+		mask-composite: add, exclude;
+		background-color: rgba(0, 0, 0, 0.5);
 	}
 
 	&:hover {
 		border: none;
-		background-color: var(--wp--preset--color--contrast);
+		background-color: var(--wp--preset--color--green);
 		filter: brightness(1.3);
 	}
 }
