@@ -42,6 +42,26 @@ body {
 	}
 }
 
+.header-main {
+	background: #000;
+	margin-left: -2rem;
+	width: calc(100% + 4rem);
+	padding-left: 2rem;
+	padding-right: 2rem;
+	.header-content {
+		max-width: 70rem;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		.wp-block-button__link {
+			background: none;
+			font-family: var(--wp--preset--font-family--ltmuseum);
+		}
+	}
+}
+
 .btn,
 button:not(.foh-display__button) {
 	position: relative;

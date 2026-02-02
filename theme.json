@@ -38,6 +38,11 @@
 					"color": "#CC3017",
 					"name": "Red",
 					"slug": "red"
+				},
+				{
+					"color": "rgba(46, 15, 8, .5)",
+					"name": "Tint",
+					"slug": "base-tint"
 				}
 			]
 		},
@@ -259,5 +264,17 @@
 				}
 			}
 		}
-	}
+	},
+	"templateParts": [
+		{
+			"name": "header",
+			"title": "Header",
+			"area": "header"
+		},
+		{
+			"name": "footer",
+			"title": "Footer",
+			"area": "footer"
+		}
+	]
 }
