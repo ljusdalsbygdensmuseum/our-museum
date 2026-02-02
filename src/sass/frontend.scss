@@ -54,7 +54,7 @@ button:not(.foh-display__button) {
 	mask: var(--corner-mask);
 	background-color: var(--wp--preset--color--green);
 	//hack: background color
-	&:after {
+	/*&:after {
 		content: '';
 		position: absolute;
 		top: 2px;
@@ -62,12 +62,12 @@ button:not(.foh-display__button) {
 		height: calc(100% - 4px);
 		width: calc(100% - 4px);
 		mask:
-			var(--corner-mask),
-			linear-gradient(#fff) 0 0 / cover no-repeat;
-		mask-composite: add, exclude;
+			var(--corner-mask) add,
+			linear-gradient(#fff) 0 0 / cover no-repeat exclude;
+		//mask-composite: add, exclude;
 		background-color: rgba(0, 0, 0, 0.5);
 	}
-
+*/
 	&:hover {
 		border: none;
 		background-color: var(--wp--preset--color--green);
