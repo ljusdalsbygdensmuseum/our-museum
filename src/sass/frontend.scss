@@ -99,6 +99,31 @@ button:not(.foh-display__button) {
 	opacity: 1;
 	color: var(--wp--preset--color--secondary);
 }
+.exhib-event-content {
+	@media screen and (max-width: 1028px) {
+		div {
+			width: 85%;
+		}
+	}
+	@media screen and (min-width: 1440px) {
+		margin-right: auto !important;
+		margin-left: auto !important;
+	}
+}
+.exhib-event-image {
+	position: absolute;
+	top: 0;
+	right: -2rem;
+	height: 100%;
+	max-width: 100%; // removes default max-width
+	width: 100%;
+	margin: 0;
+	mask: linear-gradient(90deg, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 90%);
+	z-index: -1;
+	img {
+		height: 100%;
+	}
+}
 
 $border: 3px solid var(--wp--preset--color--secondary);
 
