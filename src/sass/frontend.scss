@@ -100,6 +100,19 @@ button:not(.foh-display__button) {
 	color: var(--wp--preset--color--secondary);
 }
 .exhib-event-content {
+	position: relative;
+	&:before {
+		content: '';
+		z-index: -1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		border-radius: 150px;
+		background: var(--wp--preset--color--base-tint);
+		filter: blur(20px);
+	}
 	@media screen and (max-width: 1028px) {
 		div {
 			width: 85%;
