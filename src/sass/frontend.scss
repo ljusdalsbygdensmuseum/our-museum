@@ -64,33 +64,36 @@ body {
 
 .btn,
 button:not(.foh-display__button) {
+	z-index: 0;
 	position: relative;
 	border-radius: 0;
 	border: none;
 	padding: 0.4rem 2rem;
 	color: var(--wp--preset--color--contrast);
 	transition: all 0.15s ease-out;
-	//hack: border color
-	mask: var(--corner-mask);
-	background-color: var(--wp--preset--color--green);
-	//hack: background color
-	/*&:after {
+	&:before {
 		content: '';
+		z-index: -1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		mask: var(--corner-mask);
+		background-color: white;
+	}
+	&:after {
+		content: '';
+		z-index: -1;
 		position: absolute;
 		top: 2px;
 		left: 2px;
 		height: calc(100% - 4px);
 		width: calc(100% - 4px);
-		mask:
-			var(--corner-mask) add,
-			linear-gradient(#fff) 0 0 / cover no-repeat exclude;
-		//mask-composite: add, exclude;
-		background-color: rgba(0, 0, 0, 0.5);
-	}
-*/
-	&:hover {
-		border: none;
+		mask: var(--corner-mask);
 		background-color: var(--wp--preset--color--green);
+	}
+	&:hover {
 		filter: brightness(1.3);
 	}
 }
