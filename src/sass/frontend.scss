@@ -188,6 +188,30 @@ button:not(.foh-display__button) {
 	}
 }
 
+.page-maintenance-container {
+	&:before {
+		content: '';
+		z-index: -2;
+		position: absolute;
+		height: 100%;
+		width: 50%;
+		top: 0;
+		left: 0;
+		margin-left: 25%;
+		border-radius: 50%;
+		background-color: var(--wp--preset--color--primary);
+		filter: blur(200px);
+	}
+	margin-top: 3em;
+	text-align: center;
+	h1 {
+		margin-bottom: var(--wp--custom--gapo--l);
+	}
+	.wp-block-social-links {
+		justify-content: center;
+	}
+}
+
 $border: 3px solid var(--wp--preset--color--secondary);
 
 div.wpforms-container {
