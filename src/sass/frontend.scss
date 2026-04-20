@@ -239,7 +239,7 @@ div.wpforms-container {
 		border: none;
 		border-radius: 0;
 		border-bottom: 2px solid var(--wp--preset--color--secondary);
-		color: white;
+		color: white !important;
 	}
 	button[type] {
 		border-radius: 0;
