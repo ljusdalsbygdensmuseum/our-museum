@@ -55,9 +55,12 @@ body {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		.wp-block-button__link {
+		.home-link {
 			background: none;
 			font-family: var(--wp--preset--font-family--ltmuseum);
+			display: flex;
+			align-items: center;
+			margin-block-start: unset;
 		}
 	}
 }
@@ -179,10 +182,13 @@ button:not(.foh-display__button) {
 		margin-bottom: var(--wp--custom--gapo--l);
 	}
 	text-align: center;
-	.wp-block-buttons {
+	.home-link {
 		justify-content: center;
 		margin-top: var(--wp--custom--gapo--l);
 		a {
+			text-decoration: none;
+			color: white;
+			padding: var(--wp--custom--gapo--s);
 			font-size: larger;
 			background-color: rgba(0, 0, 0, 0.5);
 			border-radius: 5px;
